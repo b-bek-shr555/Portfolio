@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Spotify_Project</title>
+	<style type="text/css">
+		@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Edu+NSW+ACT+Foundation:wght@500&family=Poppins&family=Righteous&display=swap');
+body{
+background-color:rgba(0, 120, 100, 0.1);
+}
+
+*{
+	margin: 0;
+	padding: 0;
+	font-family:'Righteous', cursive;
+}
+nav{
+font-family:'Poppins', sans-serif;
+letter-spacing: 2px;
+}
+
+nav ul{
+ display: flex;
+ align-items: center;
+ list-style-type: none;
+ height: 55px;
+ background-color: #000000;
+ color:#ffffff;
+}
+
+nav ul li{
+	padding:20px;
+}
+.brand {
+	display: flex;
+	align-items: center;
+	font-size: 1.4em;
+	letter-spacing: 2px;
+}
+
+.brand img{
+	width:40px;
+	padding:0px 8px 0px 8px;
+}
+
+.container{
+	min-height: 64vh;
+	background-color: #000000;
+	color: #ffffff;
+	font-size:19px;
+	letter-spacing: 2px;
+	display: flex;
+	margin:23px auto;
+	width: 70%;
+	border-radius: 12px;
+	padding: 20px;
+	background-image: url('img/bg.jpg');
+	background-repeat: no-repeat;
+	background-size:contain ;
+	background-position:bottom right;
+}
+
+.bottom{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	position: sticky;
+	height: 100px;
+	width: 100%;
+	background-color: #000000;
+	color:#ffffff;
+	flex-direction: column;
+}
+
+#myProgressBar{
+  width: 75vw;
+  cursor: pointer;
+}
+
+.icons{
+	font-size: 27px;
+	padding: 10px;
+}
+
+.icons i{
+	cursor: pointer;
+}
+.song-list-container{
+  margin-top:30px;
+}
+.song-item{
+ height: 50px;
+ display: flex;
+ background-color: #fff;
+ color: #000;
+ margin: 12px;
+ justify-content: space-between;
+ align-items: center;
+ border-radius: 42px;
+ font-size:13px;
+}
+
+.song-item img{
+ width: 50px;
+ margin: 0px 5px;
+ border-radius: 50%;
+ height: 44px;
+}
+
+ span .timespan{
+	margin: 0px 23px;
+}
+
+span .timespan i{
+	cursor: pointer;
+}
+
+.gif{
+	position: absolute;
+	left: 12vw;
+	font-size: 12px;
+	letter-spacing: 2px;
+}
+.heading-color{
+	font-weight: none;
+	color:lime;
+}
+
+.gif img{
+
+	opacity: 0;
+	transition: opacity 1s ease-in ;
+}
+	</style>
+</head>
+<body>
+<!---------------------------------Navigation Bar---------------------------------------------->
+<nav>
+	<ul>
+		<li class="brand"><img src="img/logo.png">Spotify</li>
+		<li>Home</li>
+		<li>About</li>
+	</ul>
+</nav>
+<div class="container">
+	<!---------------------------------songList---------------------------------------------->
+	<div class="songList">
+			<span> <span class="heading-color">Pop</span>ular <span class="heading-color">Anime</span> Theme <span class="heading-color">Song</span>s - No Copyright <span class="heading-color">&copy;</span></span>
+			<div class="song-list-container">
+				<div class="song-item">
+					<img src="img/fgzl-bivqaadwfm.webp" alt="Thumbnail Of The Song">
+					<span>Tokyo Revengers Season-2: (WHITE NOISE)</span>
+					<span class="songplaylist"><span class="timespan">04:00 <i class="fa-sharp fa-solid fa-circle-play"></i></span></span>
+				</div>
+
+				<div class="song-item">
+					<img src="img/death-note-light-moon-ryuk-yagami-light-1400x1057-anime-death-note-hd-art-wallpaper-preview.jpg" alt="Thumbnail Of The Song">
+					<span>Death Note: (「THE WORLD 世界」))</span>
+					<span class="songplaylist"><span class="timespan">04:00 <i class="fa-sharp fa-solid fa-circle-play"></i></span></span>
+				</div>
+
+				<div class="song-item">
+					<img src="img/a.jpg" alt="Thumbnail Of The Song">
+					<span>Darling In The Franxx: (KISS OF DEATH)</span>
+					<span class="songplaylist"><span class="timespan">04:00 <i class="fa-sharp fa-solid fa-circle-play"></i></span></span>
+				</div>
+
+				<div class="song-item">
+					<img src="img/20520913.png" alt="Thumbnail Of The Song">
+					<span>Horimiya:「Iro Kousui (色香水 )」</span>
+					<span class="songplaylist"><span class="timespan">04:00 <i class="fa-sharp fa-solid fa-circle-play"></i></span></span>
+				</div>
+
+				<div class="song-item">
+					<img src="img/1099445.webp" alt="Thumbnail Of The Song">
+					<span>Kimetsu no Yaiba: (「GURENGE 紅蓮」)</span>
+					<span class="songplaylist"><span class="timespan">04:00 <i class="fa-sharp fa-solid fa-circle-play"></i></span></span>
+				</div>
+
+				<div class="song-item">
+					<img src="img/828523-naruto-shippuden-cell-phone-wallpaper-2018-1920x1200-for-iphone-5s.jpg" alt="Thumbnail Of The Song">
+					<span>Naruto Shippuden: (「BLUE BIRD 青い鳥」)</span>
+					<span class="songplaylist"><span class="timespan">04:00 <i class="fa-sharp fa-solid fa-circle-play"></i></span></span>
+				</div>
+			</div>
+	</div>
+	<!---------------------------------songBanner---------------------------------------------->
+	<div class="songBanner"></div>
+</div>
+<!---------------------------------bottom---------------------------------------------->
+<div class="bottom">
+	<input type="range" name="range" id="myProgressBar" min="0" max="100">
+	<div class="icons">
+		<i class="fa-solid fa-backward-fast"></i>
+		<i class="fa-sharp fa-solid fa-play-circle" id="masterPlay"></i>
+		<i class="fa-solid fa-forward-fast"></i>
+	</div>
+	<div class="gif">
+			<img src="playing.gif" width="80px"> Tokyo Revengers Season-2 (WHITE NOISE)
+		</div>
+</div>
+<!---------------------------------script---------------------------------------------->
+<script src="https://kit.fontawesome.com/ce1797929e.js" crossorigin="anonymous"></script>
+</body>
+</html>

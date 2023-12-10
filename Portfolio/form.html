@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Form </title>
+	<style type="text/css">
+		body{
+	background-color: #a7a8a7;
+	font-family: sans-serif;
+}
+.container{
+	max-width: 900px;
+	margin: 0px auto;
+}
+
+.apply_box{
+	max-width: 600px;
+	padding: 20px;
+	background-color: white;
+	margin: 50px auto;
+	box-shadow: 4px 3px 5px rgba(1, 1, 1, 0.1);
+	border-radius: 14px;
+}
+.heading-title{
+	font-size:21px;
+}
+
+.form-container{
+	display: grid;
+	grid-template-columns: repeat(auto-fit,minmax(200px,1fr));
+	grid-gap: 19px;
+	margin: 30px 0px;
+}
+.form-control{
+	display: flex;
+	flex-direction: column;
+}
+label{
+	font-size: 15px;
+	font-family: consolas;
+}
+
+input, select, textarea {
+
+padding: 6px 12px;
+border:3.5px solid #2f3330;
+margin-top: 7px;
+border-radius:4px;
+font-size: 13px;
+font-family: cursive;
+letter-spacing: 1.8px;
+}
+ input, select, textarea:focus{
+ 	outline-color:#f9004d;
+ }
+.button-container{
+display:flex;
+justify-content: end;
+}
+ button{
+ 	background-color: #000000;
+ 	padding: 12px 10px;
+ 	border: transparent solid 2px;
+ 	color:white;
+ 	letter-spacing: 1px;
+ 	font-weight: bold;
+ 	border-radius: 8px;
+ 	font-size: 14px;
+ 	cursor: pointer;
+ }
+  button:hover{
+  	background-color: #f9004d;
+  	color:#ffffff;
+  	font-weight: bold;
+  	transition: 0.6s ease-in-out;
+  	letter-spacing: 1px;
+  	cursor: pointer;
+  }
+
+  .textarea-control{
+  	grid-column: 1 /span 2;
+  }
+
+  .textarea-control textarea{
+  	width: 95%;
+  }
+  h1{
+  	word-spacing: 10px;
+  	letter-spacing: 1.4px;
+  }
+  .hd-color{
+  	color: #f9004f;
+  }
+  @media (max-width:456px){
+  	  	  .textarea-control{
+  	grid-column: 1 /span 1;
+  }
+  };
+	</style>
+</head>
+<body>
+<div class="container">
+	<div class="apply_box">
+		<h1>Contact <span class="hd-color">Me<span></h1>
+		<form>
+			<div class="form-container">
+				<div class="form-control">
+					<label for="first_Name"> First Name:</label>
+					<input type="text" name="firstName" id="first_Name" placeholder="Enter Your First Name...">
+				</div>
+
+				<div class="form-control">
+					<label for="Last_Name"> Last  Name:</label>
+					<input type="text" name="Last Name" id="Last_Name" placeholder="Enter Your Last Name...">
+				</div>
+
+				<div class="form-control">
+					<label for="Email"> Email:</label>
+					<input type="email" name="Email" id="Email" placeholder="Enter Your Email...">
+				</div>
+
+				<div class="form-control">
+					<label for="Pass_word"> Password:</label>
+					<input type="password" name="Password" id="Pass_word" placeholder="Enter Your Password..." minlength="6" maxlength="10">
+				</div>
+
+				<div class="form-control">
+					<label for="gen"> Gender : </label>
+					<select>
+						<option> Enter Your Gender... </option>
+						<optgroup label="Gender">  </optgroup>
+						<option> Male </option>
+						<option> Female </option>
+						<option> Others </option>
+					</select>
+				</div>
+
+				<div class="textarea-control">
+					<label for="address"> Address:</label>
+					<textarea id="address" name="address" rows="4" cols="33" placeholder="Enter Your Address"></textarea>
+				</div>
+
+					<div class="form-control">
+					<label for="city">City : </label>
+					<input type="text" name="city" id="city" placeholder="Enter Your city...">
+				</div>
+
+					<div class="form-control">
+					<label for="Cell-Number">Cell-Number : </label>
+					<input type="number" name="Cell-Number" id="Cell-Number" placeholder="Enter Your Cell-Number...">
+				</div>
+
+					<div class="form-control">
+					<label for="Date">Date : </label>
+					<input type="date" name="Date" id="Date" value="2023-03-08">
+				</div>
+
+					<div class="form-control">
+					<label for="Upload">Upload Your Photo : </label>
+					<input type="file" name="Upload" id="Upload" required="">
+				</div>
+			</div>
+			<div class="button-container">
+				<button type="submit" id="btn">Submit</button>
+			</div>
+		</form>
+</div>
+</body>
+</html>
